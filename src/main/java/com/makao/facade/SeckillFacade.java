@@ -1,4 +1,6 @@
-package com.makao.service;
+package com.makao.facade;
+
+import java.util.List;
 
 import com.makao.dto.Exposer;
 import com.makao.dto.SeckillExecution;
@@ -7,16 +9,11 @@ import com.makao.exception.RepeatKillException;
 import com.makao.exception.SeckillCloseException;
 import com.makao.exception.SeckillException;
 
-import java.util.List;
-
 /**
- * Created by wchb7 on 16-5-13.
- * 业务接口:站在"使用者"的角度设计接口
- * 1.方法的定义的粒度.2.参数.3.返回类型(return /异常)
+ * @author ZYR
+ * 远程调用的接口, dubbo接口
  */
-public interface SeckillService {
-
-
+public interface SeckillFacade { 
     /**
      * 查询所有秒杀记录
      *
@@ -63,5 +60,4 @@ public interface SeckillService {
      * @return
      */
     SeckillExecution executeSeckillProcedure(long seckillId, long userPhone, String md5);
-
 }
