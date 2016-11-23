@@ -1,13 +1,19 @@
 package com.makao.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * Created by wchb7 on 16-5-8.
  */
-public class SuccessKilled {
+public class SuccessKilled implements Serializable {
 
     /**
+	 * 
+	 */
+	private static final long serialVersionUID = 4530845873485712480L;
+
+	/**
      * 一个秒杀seckill对应多个成功记录
      */
     private Seckill seckill;
